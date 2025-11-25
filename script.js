@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('registration-form')
     const feedbackDiv = document.getElementById('form-feedback')
 
@@ -21,9 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (username.length <3 || username !== isValid) {
             message[0].username
         }
+
+        // Email Validation
         if (!email.include('@') && !email.include('.')){
             message[1].email
         }
+
+        // Password Validation
         if (password.length < 6) {
             message[2].password
         }
